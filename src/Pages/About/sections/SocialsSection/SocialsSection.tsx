@@ -20,7 +20,7 @@ const SocialSectionContent = (
     </div>
     <div className={styles.socialLink}>
       <div className={styles.github}>
-        <ExternalLink href='https://github.com/FabianSiffert1/'>Github</ExternalLink>
+        <ExternalLink href='https://github.com/FabianSiffert/'>Github</ExternalLink>
       </div>
     </div>
   </div>

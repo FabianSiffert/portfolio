@@ -13,7 +13,7 @@ export default function Projects() {
         }
         links={[
           { title: 'Link', url: 'https://inv.siffert.io' },
-          { title: 'Github', url: 'https://github.com/FabianSiffert1/inv' }
+          { title: 'Github', url: 'https://github.com/FabianSiffert/inv' }
         ]}
         backgroundColor={ColorVariant.elementBlue}
       />
@@ -35,7 +35,7 @@ export default function Projects() {
             Vibecoded in Python.
           </>
         }
-        links={[{ title: 'Github', url: 'https://github.com/FabianSiffert1/docker-hud' }]}
+        links={[{ title: 'Github', url: 'https://github.com/FabianSiffert/docker-hud' }]}
         backgroundColor={ColorVariant.elementPink}
       />
       <Project
@@ -59,7 +59,7 @@ export default function Projects() {
         }
         links={[
           { title: 'ESPHome', url: 'https://esphome.io' },
-          { title: 'Github', url: 'https://github.com/FabianSiffert1/esphome-devices' }
+          { title: 'Github', url: 'https://github.com/FabianSiffert/esphome-devices' }
         ]}
         backgroundColor={ColorVariant.elementLavender}
       />
@@ -79,7 +79,7 @@ export default function Projects() {
             <ExternalLink href='https://github.com/piitaya/lovelace-mushroom'>Mushroom</ExternalLink> cards for the dashboard.
           </>
         }
-        links={[{ title: 'Github', url: 'https://github.com/FabianSiffert1/plant-care-ha' }]}
+        links={[{ title: 'Github', url: 'https://github.com/FabianSiffert/plant-care-ha' }]}
         backgroundColor={ColorVariant.elementGreen}
       />
       <Project
@@ -97,7 +97,7 @@ export default function Projects() {
             it's still a work in progress.
           </>
         }
-        links={[{ title: 'Github', url: 'https://github.com/FabianSiffert1/inventory' }]}
+        links={[{ title: 'Github', url: 'https://github.com/FabianSiffert/inventory' }]}
         backgroundColor={ColorVariant.elementRose}
       />
       <Project
@@ -107,7 +107,7 @@ export default function Projects() {
         }
         links={[
           { title: 'Link', url: 'https://old.siffert.io' },
-          { title: 'Github', url: 'https://github.com/FabianSiffert1/siffertio' }
+          { title: 'Github', url: 'https://github.com/FabianSiffert/siffertio' }
         ]}
         backgroundColor={ColorVariant.elementPistachio}
       />
@@ -116,7 +116,7 @@ export default function Projects() {
         projectDescription={'This is my current portfolio—more minimalistic in design and built with responsiveness in mind.'}
         links={[
           { title: 'Link', url: 'https://siffert.io' },
-          { title: 'Github', url: 'https://github.com/FabianSiffert1/portfolio' }
+          { title: 'Github', url: 'https://github.com/FabianSiffert/portfolio' }
         ]}
         backgroundColor={ColorVariant.elementPeach}
       />
