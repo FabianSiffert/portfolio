@@ -25,25 +25,27 @@ html[data-theme='light'] {
 }
 
 html[data-theme='dark'] {
-  --background-color: #{$neutral-900};
-  --background-gradient: #{$neutral-900};
-  --color: #{$neutral-0};
+  --background-color: #{$night-base};
+  --background-gradient: none;
+  --color: #{$night-text};
 
-  --primary: #{$primary-500};
-  --secondary: #{$neutral-500};
+  --primary: #{$night-accent};
+  --secondary: #{$night-subtext};
 
-  --marker: #{$neutral-0};
+  --marker: #{$night-accent};
 
-  --elementPeach: #{$soft-peach};
-  --elementPink: #{$soft-pink};
-  --elementRose: #{$soft-rose};
-  --elementLavender: #{$soft-lavender};
-  --elementBlue: #{$soft-blue};
-  --elementBlueVariant: #{$soft-blue-2};
-  --elementBlueVariant2: #{$soft-blue-3};
-  --elementBlueGreenGradient: #{$soft-blue-green-gradient};
-  --elementGreen: #{$soft-mint};
-  --elementGreenVariant: #{$soft-mint-2};
-  --elementGreenVariant2: #{$soft-mint-3};
-  --elementPistachio: #{$soft-pistachio};
+  --elementPeach: #{$element-peach-dark};
+  --elementPink: #{$element-pink-dark};
+  --elementRose: #{$element-rose-dark};
+  --elementLavender: #{$element-lavender-dark};
+  --elementBlue: #{$element-blue-dark};
+  --elementBlueVariant: #{$element-blue-variant-dark};
+  --elementBlueVariant2: #{$element-blue-variant-2-dark};
+  --elementBlueGreenGradient: #{$element-blue-green-gradient-dark};
+  --elementGreen: #{$element-green-dark};
+  --elementGreenVariant: #{$element-green-variant-dark};
+  --elementGreenVariant2: #{$element-green-variant-2-dark};
+  --elementPistachio: #{$element-pistachio-dark};
+
+  color-scheme: dark;
 }
