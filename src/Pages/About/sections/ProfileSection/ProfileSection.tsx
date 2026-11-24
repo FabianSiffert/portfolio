@@ -1,7 +1,22 @@
+import { useEffect, useState } from 'react'
 import styles from './ProfileSection.module.scss'
 import { profilePicture } from '../../../../ui/_cozyAssets'
 
+const localTimeFormat = new Intl.DateTimeFormat('en-GB', {
+  timeZone: 'Europe/Berlin',
+  hour: '2-digit',
+  minute: '2-digit',
+  timeZoneName: 'short'
+})
+
 export default function ProfileSection() {
+  const [localTime, setLocalTime] = useState(() => localTimeFormat.format(new Date()))
+
+  useEffect(() => {
+    const interval = setInterval(() => setLocalTime(localTimeFormat.format(new Date())), 1000)
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <div className={styles.profileSection}>
       <div className={styles.profilePicture}>
@@ -22,6 +37,10 @@ export default function ProfileSection() {
           <div className={styles.field}>
             <dt>Base</dt>
             <dd>Düsseldorf DE</dd>
+          </div>
+          <div className={styles.field}>
+            <dt>Local</dt>
+            <dd>{localTime}</dd>
           </div>
         </dl>
       </div>
