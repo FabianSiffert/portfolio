@@ -1,5 +1,9 @@
 @use '../../../../ui/cozy.module';
 
+.profileFrame {
+  @include cozy.revealSurface;
+}
+
 .profileSection {
   display: flex;
   flex-direction: row;

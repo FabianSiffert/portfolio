@@ -1,6 +1,7 @@
 @use '../cozy.module';
 
 .section {
+  @include cozy.revealSurface;
 }
 
 .sectionTitle {

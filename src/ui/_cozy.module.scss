@@ -60,6 +60,19 @@ $archEase: cubic-bezier(0.22, 0.61, 0.36, 1);
     box-shadow $surfaceTransition;
 }
 
+@mixin revealSurface {
+  margin: -0.7rem;
+  padding: 0.7rem;
+  @include surface;
+  transition: background-color $surfaceTransition;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: color-mix(in srgb, var(--color) 5%, transparent);
+    }
+  }
+}
+
 @mixin surfaceInteractive($radius: $surfaceRadius) {
   @include surface($radius);
   cursor: pointer;
