@@ -22,12 +22,10 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({
   links,
   backgroundColor = ColorVariant.elementBlue
 }) => {
-  const backgroundStyle = {
-    backgroundColor: `color-mix(in srgb, var(--${backgroundColor}) 35%, transparent)`
-  }
+  const tintStyle = { '--tint': `var(--${backgroundColor})` } as React.CSSProperties
   return (
     <Section title={projectTitle}>
-      <div className={styles.project} style={backgroundStyle}>
+      <div className={styles.project} style={tintStyle}>
         <div className={styles.description}>
           {typeof projectDescription === 'string'
             ? projectDescription.split('\n').map((line, idx) => (
@@ -40,7 +38,7 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({
         </div>
         <div className={styles.links}>
           {links.map((link) => (
-            <ExternalLink key={link.url} href={link.url} style={backgroundStyle}>
+            <ExternalLink key={link.url} href={link.url}>
               {link.title}
             </ExternalLink>
           ))}

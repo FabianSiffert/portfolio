@@ -48,6 +48,7 @@ $monoFont: 'IBM Plex Mono', ui-monospace, monospace;
 $surfaceRadius: 1.5rem 0.4rem 1.5rem 0.4rem;
 $surfaceRadiusSmall: 1rem 0.3rem 1rem 0.3rem;
 $surfaceTransition: 160ms ease;
+$tintStrength: 40%;
 
 $archRadius: 6rem 6rem 1.5rem 1.5rem;
 $archRadiusSmall: 3rem 3rem 0.75rem 0.75rem;
@@ -85,6 +86,28 @@ $archEase: cubic-bezier(0.22, 0.61, 0.36, 1);
   &:focus-visible {
     outline: 2px solid var(--color);
     outline-offset: 3px;
+  }
+}
+
+@mixin tintedSurface($color: null) {
+  @if $color {
+    --tint: #{$color};
+  }
+  @include surface;
+  background-color: color-mix(in srgb, var(--tint) $tintStrength, transparent);
+}
+
+@mixin chipLink {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  text-decoration: none;
+  text-underline-offset: 0.25rem;
+  box-shadow: 0 0.15rem 0.5rem color-mix(in srgb, var(--color) 10%, transparent);
+  background-color: color-mix(in srgb, var(--tint) $tintStrength, transparent);
+  @include surfaceInteractive($surfaceRadiusSmall);
+
+  &:hover {
+    text-decoration: underline;
   }
 }
 

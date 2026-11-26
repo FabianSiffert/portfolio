@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.agents/skills/
+.claude/skills/
+skills-lock.json
+architecture-review-*.html
