@@ -1,43 +1,25 @@
-import React, { JSX } from 'react'
+import React from 'react'
 import styles from './Project.module.scss'
 import Section from '../../../ui/components/Section'
 import ExternalLink from '../../../ui/components/ExternalLink'
-import { ColorVariant } from './colorVariant'
+import type { Project } from '../projectCatalogue'
 
-interface ProjectLink {
-  title: string
-  url: string
+interface ProjectCardProps {
+  project: Project
 }
 
-interface ProjectSectionProps {
-  projectTitle: string
-  projectDescription: string | JSX.Element
-  links: ProjectLink[]
-  backgroundColor?: ColorVariant
-}
-
-const ProjectSection: React.FC<ProjectSectionProps> = ({
-  projectTitle,
-  projectDescription,
-  links,
-  backgroundColor = ColorVariant.elementBlue
-}) => {
-  const tintStyle = { '--tint': `var(--${backgroundColor})` } as React.CSSProperties
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  const tintStyle = { '--tint': `var(--${project.color})` } as React.CSSProperties
   return (
-    <Section title={projectTitle}>
+    <Section title={project.title}>
       <div className={styles.project} style={tintStyle}>
         <div className={styles.description}>
-          {typeof projectDescription === 'string'
-            ? projectDescription.split('\n').map((line, idx) => (
-                <React.Fragment key={idx}>
-                  {line}
-                  <br />
-                </React.Fragment>
-              ))
-            : projectDescription}
+          {project.description.map((paragraph, idx) => (
+            <p key={idx}>{paragraph}</p>
+          ))}
         </div>
         <div className={styles.links}>
-          {links.map((link) => (
+          {project.links.map((link) => (
             <ExternalLink key={link.url} href={link.url}>
               {link.title}
             </ExternalLink>
@@ -48,4 +30,4 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({
   )
 }
 
-export default ProjectSection
+export default ProjectCard

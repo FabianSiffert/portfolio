@@ -10,6 +10,13 @@
 }
 
 .description {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  p {
+    margin: 0;
+  }
 }
 
 .links {
