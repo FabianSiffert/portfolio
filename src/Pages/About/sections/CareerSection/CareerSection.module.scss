@@ -18,12 +18,11 @@
 
 .employment {
   width: 100%;
-  @include cozy.surface;
+  @include cozy.tintedSurface(var(--elementLavender));
   padding: 1.2rem 1.3rem;
   display: flex;
   text-align: center;
   flex-direction: column;
-  background-color: color-mix(in srgb, var(--elementLavender) 50%, transparent);
   justify-content: space-between;
 }
 
@@ -48,15 +47,6 @@
   font-size: 1rem;
 
   a {
-    @include cozy.surfaceInteractive(cozy.$surfaceRadiusSmall);
-    padding: 0.8rem 1.4rem;
-    text-decoration: none;
-    box-shadow: 0 0.15rem 0.5rem color-mix(in srgb, var(--color) 10%, transparent);
-    background-color: color-mix(in srgb, var(--elementLavender) 50%, transparent);
-    text-underline-offset: 0.25rem;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    @include cozy.chipLink;
   }
 }

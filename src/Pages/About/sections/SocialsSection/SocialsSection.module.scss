@@ -19,21 +19,10 @@
 }
 
 .socialLink {
-  background-color: color-mix(in srgb, var(--elementBlue) 35%, transparent);
   padding: 1.2rem 1.3rem;
-  @include cozy.surface;
+  @include cozy.tintedSurface(var(--elementBlue));
 
   a {
-    display: inline-block;
-    @include cozy.surfaceInteractive(cozy.$surfaceRadiusSmall);
-    padding: 0.8rem 1.4rem;
-    text-decoration: none;
-    box-shadow: 0 0.15rem 0.5rem color-mix(in srgb, var(--color) 10%, transparent);
-    background-color: color-mix(in srgb, var(--elementBlue) 35%, transparent);
-    text-underline-offset: 0.25rem;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    @include cozy.chipLink;
   }
 }
