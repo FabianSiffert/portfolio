@@ -10,8 +10,7 @@
   min-height: 50vh;
   padding: 2.5rem 1.5rem;
   box-sizing: border-box;
-  @include cozy.surface;
-  background-color: color-mix(in srgb, var(--elementPink) 40%, transparent);
+  @include cozy.tintedSurface(var(--elementPink));
   @include cozy.typoBodyCaps;
   text-align: center;
 }

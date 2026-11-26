@@ -11,8 +11,7 @@
   justify-content: center;
   gap: 4rem;
   padding: 2.5rem 1.5rem;
-  @include cozy.surface;
-  background-color: color-mix(in srgb, var(--elementPeach) 50%, transparent);
+  @include cozy.tintedSurface(var(--elementPeach));
 
   @media (max-width: cozy.$smallScreen) {
     flex-direction: column;

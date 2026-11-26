@@ -55,18 +55,13 @@
   gap: 0.5rem;
   min-height: 0;
   padding: 0.8rem 0.6rem;
-  @include cozy.surface(cozy.$surfaceRadiusSmall);
+  @include cozy.tintedSurface(var(--elementGreen));
 }
 
 .mainProgrammingSkillsList,
-.secondaryProgrammingSkillsList {
-  @extend %skillsListBase;
-  background-color: color-mix(in srgb, var(--elementGreen) 40%, transparent);
-}
-
+.secondaryProgrammingSkillsList,
 .softSkillsList {
   @extend %skillsListBase;
-  background-color: color-mix(in srgb, var(--elementGreen) 50%, transparent);
 }
 
 .deprecated {
