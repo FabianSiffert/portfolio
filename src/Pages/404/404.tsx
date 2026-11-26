@@ -5,7 +5,9 @@ export default function ErrorPage() {
   return (
     <div className={styles.errorPage}>
       <h1 className={styles.title}>404 - Not found</h1>
-      <Link to='/'>go back</Link>
+      <Link to='/' className={styles.backLink}>
+        <span aria-hidden='true'>← </span>go back
+      </Link>
     </div>
   )
 }
